@@ -1,0 +1,1 @@
+Updated model optimizer from Stochastic Gradient descent without schedueling to the ADAM optimizer.

@@ -1,0 +1,44 @@
+Title: Pretrained Neural Networks for Poultry Image Classification: A Pilot Study
+
+Abstract
+---------
+[~200 words]
+We address the problem of automating classification of chicken breast images. A pretrained convolutional neural network was fine-tuned and evaluated on an 80/20 train/validation split. Training and validation loss curves demonstrate [trend]. The model achieved [X%] sensitivity and [Y%] specificity across categories, with a confusion matrix highlighting [strengths/weaknesses]. These results show feasibility of transfer learning in food-quality applications and lay the groundwork for interpretable models using extracted embeddings.
+
+1. Introduction
+---------------
+Automation in food safety and bioprocessing requires robust classification methods.
+Prior approaches [cite any papers] rely on manual inspection or classical machine vision.
+Deep learning offers high accuracy but limited interpretability.  
+**Objective**: to train and evaluate a pretrained CNN on chicken breast images and prepare features for simpler classifiers.
+
+2. Methods
+----------
+- Dataset: [# samples, categories, split 80/20]  
+- Preprocessing: resize to 224×224, normalize to ImageNet stats, augmentations (flip, rotation).  
+- Model: ResNet18 pretrained on ImageNet, final FC replaced.  
+- Training: optimizer=Adam, lr=1e-3, batch=32, epochs=3.  
+- Metrics: loss, accuracy, sensitivity, specificity, confusion matrix.  
+- Environment: PyTorch, TensorBoard, Colab GPU.
+
+3. Results
+----------
+- Fig. 1: Training vs Validation Loss (insert plot).
+- Fig. 2: Confusion Matrix (insert plot).
+- Table 1: Sensitivity & Specificity by class.  
+Performance summary: Validation loss plateaued at [value]; training loss [describe].  
+
+4. Discussion
+-------------
+Results indicate that the network learned meaningful features, with sensitivity [high/low] and specificity [trend].  
+Main challenges: small dataset, misclassification between [classes].  
+Future work: use embeddings for decision trees/forests, expand dataset, explore augmentations.
+
+5. Conclusion
+-------------
+This pilot demonstrates that pretrained CNNs can classify chicken breast images with reasonable accuracy, setting the stage for interpretable downstream classifiers.
+
+References
+----------
+[List here: PyTorch, key DL papers, food quality imaging sources]
+
